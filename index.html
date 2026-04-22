@@ -10,6 +10,9 @@
 </head>
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
     <!-- Announcement Bar -->
     <div class="top-bar">
         Limited Slots for Summer Transformation! <span>Save 20% if you join today.</span>
@@ -19,15 +22,17 @@
     <header class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="brand" style="color: var(--primary); font-size: 2rem; margin-bottom: 2rem;">PEAK<span>TRAIN</span></div>
-                <h1>Indian Professionals: Get In The <span>Best Shape</span> Of Your Life.</h1>
-                <p>Sustainable, evidence-based fitness coaching that fits your busy schedule. No restrictive diets. No soul-crushing workouts.</p>
+                <div class="brand-logo reveal-up" style="margin-bottom: 2rem;">
+                    <img src="Peak-Train-1.png" alt="Peaktrain Logo" style="height: 50px; width: auto; display: block;">
+                </div>
+                <h1 class="reveal-up">Indian Professionals: Get In The <span>Best Shape</span> Of Your Life.</h1>
+                <p class="reveal-up">Sustainable, evidence-based fitness coaching that fits your busy schedule. No restrictive diets. No soul-crushing workouts.</p>
                 <ul class="usp-list">
-                    <li><i class="fas fa-check-circle"></i> Personalised Nutrition (Indian Meal Friendly)</li>
-                    <li><i class="fas fa-check-circle"></i> Time-Efficient Workouts (30-45 mins)</li>
-                    <li><i class="fas fa-check-circle"></i> 1-on-1 Accountability & Support</li>
+                    <li class="reveal-up"><i class="fas fa-check-circle"></i> Personalised Nutrition (Indian Meal Friendly)</li>
+                    <li class="reveal-up"><i class="fas fa-check-circle"></i> Time-Efficient Workouts (30-45 mins)</li>
+                    <li class="reveal-up"><i class="fas fa-check-circle"></i> 1-on-1 Accountability & Support</li>
                 </ul>
-                <a href="#consultation" class="btn btn-primary">Book a Free Consultation</a>
+                <a href="#consultation" class="btn btn-primary reveal-up">Book a Free Consultation</a>
                 <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                     <div style="display: flex;">
                         <i class="fas fa-star" style="color: #FFD700;"></i>
@@ -39,8 +44,8 @@
                     <span style="font-size: 0.9rem; font-weight: 600;">500+ Transformations Done</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Fitness Professional">
+            <div class="hero-image reveal-scale">
+                <img src="model-hero.png" alt="Fitness Professional" class="float-img">
             </div>
         </div>
     </header>
@@ -48,23 +53,22 @@
     <!-- Social Proof Section -->
     <section class="transformation-section section-padding">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title reveal-up">
                 <h2>Real People. <span>Real Results.</span></h2>
                 <p>We've helped over 500+ busy professionals lose weight and build muscle sustainably.</p>
             </div>
             <div class="trans-grid">
                 <!-- Case Study 1 -->
-                <div class="trans-card">
-                    <div class="trans-img-split">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" alt="Before">
-                        <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2ec617?q=80&w=2070&auto=format&fit=crop" alt="After">
+                <div class="trans-card reveal-right">
+                    <div class="trans-img-single">
+                        <img src="IMG_6501.png" alt="Arjun's Transformation">
                     </div>
-                    <h4>Arjun, IT Manager</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Lost 12kg while traveling for work every week."</p>
+                    <h4>Vaishali Ahlawat, Engineer</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Sticking to the plan."</p>
                     <div class="trans-data">
                         <div class="data-item">
                             <span>Weight Loss</span>
-                            <strong>12.5 KG</strong>
+                            <strong>7 KG</strong>
                         </div>
                         <div class="data-item">
                             <span>Duration</span>
@@ -73,17 +77,16 @@
                     </div>
                 </div>
                 <!-- Case Study 2 -->
-                <div class="trans-card">
-                    <div class="trans-img-split">
-                        <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=2070&auto=format&fit=crop" alt="Before">
-                        <img src="https://images.unsplash.com/photo-1548690312-e3b507d17a4d?q=80&w=2070&auto=format&fit=crop" alt="After">
+                <div class="trans-card reveal-right">
+                    <div class="trans-img-single">
+                        <img src="PHOTO-2025-06-07-08-28-41-1.jpg" alt="Priyanka's Transformation">
                     </div>
-                    <h4>Priyanka, Architect</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Finally fixed my relationship with food."</p>
+                    <h4>Karan Singla, Marketing Executive</h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Loose Body Fat + Fit back into his summer clothes."</p>
                     <div class="trans-data">
                         <div class="data-item">
                             <span>Fat Loss</span>
-                            <strong>8 KG</strong>
+                            <strong>8.5 KG</strong>
                         </div>
                         <div class="data-item">
                             <span>Duration</span>
@@ -92,17 +95,16 @@
                     </div>
                 </div>
                 <!-- Case Study 3 -->
-                <div class="trans-card">
-                    <div class="trans-img-split">
-                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop" alt="Before">
-                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="After">
+                <div class="trans-card reveal-right">
+                    <div class="trans-img-single">
+                        <img src="photo-output-3-1-974x1024.jpg" alt="Rahul's Transformation">
                     </div>
-                    <h4>Rahul, CEO</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Increased my energy levels significantly."</p>
+                    <h4>Shauryya, Tech Consultant </h4>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Loose Body Fat."</p>
                     <div class="trans-data">
                         <div class="data-item">
-                            <span>Muscle Gain</span>
-                            <strong>4 KG</strong>
+                            <span>Fat Loss</span>
+                            <strong>12 KG</strong>
                         </div>
                         <div class="data-item">
                             <span>Duration</span>
@@ -140,8 +142,8 @@
                     <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; font-weight: 500;">Book Now & Get up to 30% Off</p>
                 </div>
             </div>
-            <div class="pain-point-image">
-                <img src="https://images.unsplash.com/photo-1543339308-43e59d6b73a6?q=80&w=2070&auto=format&fit=crop" alt="Enjoying healthy food">
+            <div class="pain-point-image reveal-scale">
+                <img src="7746fd79-a633-4fc4-852f-8a8c68c4d854.jpg" alt="Stressed Professional at Work">
             </div>
         </div>
     </section>
@@ -149,8 +151,8 @@
     <!-- Method Section: The 5-Step Success Formula (Revamped) -->
     <section class="method-section section-padding">
         <div class="container method-grid-revamp">
-            <div class="method-side-img">
-                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2070&auto=format&fit=crop" alt="Healthy Indian Meal Collage">
+            <div class="method-side-img reveal-left">
+                <img src="f54e942b-9b70-442c-b0c7-bd910349ffad.jpg" alt="Healthy Indian Thali">
             </div>
             <div class="method-content-side">
                 <span class="method-subtitle">Let's change that</span>
@@ -318,7 +320,7 @@
                     </div>
                 </div>
                 <div class="inclusion-image">
-                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop" alt="Peaktrain Coach">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Professional Health Coach">
                 </div>
             </div>
             <div class="inclusion-footer">
@@ -346,7 +348,7 @@
                     </div>
                 </div>
                 <div class="founders-image">
-                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1974&auto=format&fit=crop" alt="Founder Sid Singh">
+                    <img src="IMG_2501-1.png" alt="Founder Sid Singh">
                 </div>
             </div>
         </div>
@@ -492,8 +494,8 @@
                     </div>
                 </div>
             </div>
-            <div class="app-mockup">
-                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop" alt="App Mockup">
+            <div class="app-mockup reveal-scale">
+                <img src="Screenshot-2025-07-30-125537.png" alt="App Mockup" class="float-img">
             </div>
         </div>
     </section>
@@ -545,6 +547,10 @@
         </div>
     </div>
 
+    <!-- GSAP for Premium Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
     <script src="main.js"></script>
 </body>
 </html>
