@@ -793,6 +793,32 @@ h1, h2, h3, .brand {
     box-shadow: var(--shadow-lg);
 }
 
+
+/* Typeform Section */
+.typeform-section {
+    background: #FFF9F5;
+    padding: 8rem 0;
+}
+
+.typeform-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 0;
+    border-radius: 24px;
+    box-shadow: 0 40px 100px -20px rgba(0,0,0,0.08);
+    border: 1px solid var(--border);
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.typeform-wrapper iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    border-radius: 12px;
+}
+
 /* FAQ Accordion */
 .faq-list {
     max-width: 800px;

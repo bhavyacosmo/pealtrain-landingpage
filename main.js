@@ -297,6 +297,14 @@ gsap.from('.app-mockup', {
 });
 
 // =====================================================
+// TYPEFORM SECTION
+// =====================================================
+gsap.from('.typeform-wrapper', {
+    scrollTrigger: { trigger: '.typeform-section', start: 'top 80%' },
+    autoAlpha: 0, scale: 0.95, y: 40, duration: 1, ease: 'power3.out'
+});
+
+// =====================================================
 // FAQ SECTION
 // =====================================================
 gsap.from('.faq-item', {
@@ -355,12 +363,27 @@ window.addEventListener('load', () => {
 // =====================================================
 // Smooth CTA Scroll
 // =====================================================
+// =====================================================
+// Smooth CTA Scroll
+// =====================================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth' });
+            const offset = 20; // Small offset for better framing
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = target.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
         }
     });
 });
