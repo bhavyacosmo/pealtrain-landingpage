@@ -28,17 +28,16 @@ gsap.set('.hero-image', { autoAlpha: 0, x: 80, scale: 0.9 });
 const heroTl = gsap.timeline({ delay: 0.3 });
 
 heroTl
-    .to('.brand-logo',                                   { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out' })
-    .to('.hero-content h1',                              { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
-    .to('.hero-content p',                               { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-    .to('.usp-list li',                                  { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out' }, '-=0.3')
-    .to('.hero-content .btn-primary',                    { autoAlpha: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }, '-=0.1')
-    .to('.hero-content [style*="margin-top: 1.5rem"]',   { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.1')
-    .to('.hero-image',                                   { autoAlpha: 1, x: 0, scale: 1, duration: 1, ease: 'power3.out' }, '-=0.8');
+    .to('.brand-logo', { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out' })
+    .to('.hero-content h1', { autoAlpha: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.4')
+    .to('.hero-content p', { autoAlpha: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
+    .to('.usp-list li', { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out' }, '-=0.3')
+    .to('.hero-content .btn-primary', { autoAlpha: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }, '-=0.1')
+    .to('.hero-content [style*="margin-top: 1.5rem"]', { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.1')
+    .to('.hero-image', { autoAlpha: 1, x: 0, scale: 1, duration: 1, ease: 'power3.out' }, '-=0.8');
 
-// =====================================================
-// MOUSE PARALLAX ON HERO IMAGE
-// =====================================================
+// Parallax disabled to stabilize image as requested
+/*
 const heroImage = document.querySelector('.hero-image');
 if (heroImage) {
     document.addEventListener('mousemove', (e) => {
@@ -52,6 +51,7 @@ if (heroImage) {
         });
     });
 }
+*/
 
 // =====================================================
 // ANIMATED NUMBER COUNTERS for transformation stats
@@ -158,10 +158,27 @@ gsap.from('.pain-point-image', {
     scrollTrigger: { trigger: '.pain-point-section', start: 'top 72%' },
     autoAlpha: 0, scale: 0.88, duration: 1, ease: 'power3.out'
 });
+/* 
 gsap.to('.pain-point-image img', {
     scrollTrigger: { trigger: '.pain-point-section', start: 'top bottom', end: 'bottom top', scrub: 1.5 },
     y: -60, ease: 'none'
 });
+*/
+
+// SEQUENTIAL LOOP ANIMATION
+const loopItems = document.querySelectorAll('.loop-item');
+if (loopItems.length > 0) {
+    const loopTl = gsap.timeline({ repeat: -1 });
+    loopItems.forEach((item, index) => {
+        loopTl
+            .to(item, { color: '#E66D1B', scale: 1.1, duration: 0.5, ease: 'power2.out' })
+            .to(item, { color: 'inherit', scale: 1, duration: 0.5, ease: 'power2.in' }, '+=0.5');
+    });
+}
+
+// Add shimmer class to the specific button
+const painPointBtn = document.querySelector('.pain-point-content .btn-primary');
+if (painPointBtn) painPointBtn.classList.add('shimmer');
 
 // =====================================================
 // METHOD SECTION – Left Swipe + Parallax
@@ -186,10 +203,12 @@ gsap.from('.method-step-row', {
     scrollTrigger: { trigger: '.method-steps-list', start: 'top 82%' },
     autoAlpha: 0, x: 30, duration: 0.5, stagger: 0.15, ease: 'power2.out'
 });
+/* 
 gsap.to('.method-side-img img', {
     scrollTrigger: { trigger: '.method-section', start: 'top bottom', end: 'bottom top', scrub: 1.5 },
     y: -50, ease: 'none'
 });
+*/
 
 // =====================================================
 // COMPARISON SECTION – Row Stagger
@@ -198,12 +217,40 @@ gsap.from('.comparison-wrapper', {
     scrollTrigger: { trigger: '.comparison-wrapper', start: 'top 82%' },
     autoAlpha: 0, y: 50, scale: 0.97, duration: 1, ease: 'power3.out'
 });
-// Stagger each row of comp cells
+// Enhanced Stagger Reveal with Icon Pop
 const compRows = document.querySelectorAll('.comp-cell.feature-col');
 compRows.forEach((cell, i) => {
-    gsap.from(cell.parentElement ? [cell, cell.nextElementSibling, cell.nextElementSibling?.nextElementSibling, cell.nextElementSibling?.nextElementSibling?.nextElementSibling] : cell, {
-        scrollTrigger: { trigger: cell, start: 'top 90%', toggleActions: 'play none none none' },
-        autoAlpha: 0, y: 12, duration: 0.4, stagger: 0.07, delay: i * 0.05, ease: 'power2.out'
+    const rowCells = [cell, cell.nextElementSibling, cell.nextElementSibling?.nextElementSibling, cell.nextElementSibling?.nextElementSibling?.nextElementSibling, cell.nextElementSibling?.nextElementSibling?.nextElementSibling?.nextElementSibling];
+
+    gsap.from(rowCells, {
+        scrollTrigger: { 
+            trigger: cell, 
+            start: 'top 92%', // Trigger slightly earlier
+            toggleActions: 'play none none none' 
+        },
+        opacity: 0,
+        y: 15,
+        duration: 0.6,
+        stagger: 0.08,
+        delay: i * 0.03,
+        ease: 'power2.out',
+        clearProps: 'all' // Crucial for visibility after animation
+    });
+
+    // Icon pop animation
+    rowCells.forEach(c => {
+        if (!c) return;
+        const icon = c.querySelector('i');
+        if (icon) {
+            gsap.from(icon, {
+                scrollTrigger: { trigger: c, start: 'top 92%' },
+                scale: 0,
+                duration: 0.5,
+                delay: i * 0.03 + 0.3,
+                ease: 'back.out(2)',
+                clearProps: 'all'
+            });
+        }
     });
 });
 
@@ -222,10 +269,12 @@ gsap.from('.inclusion-image', {
     scrollTrigger: { trigger: '.inclusion-section', start: 'top 78%' },
     autoAlpha: 0, x: 60, duration: 0.9, ease: 'power3.out'
 });
+/* 
 gsap.to('.inclusion-image img', {
     scrollTrigger: { trigger: '.inclusion-section', start: 'top bottom', end: 'bottom top', scrub: 1.5 },
     y: -40, ease: 'none'
 });
+*/
 // CTA button bounce-in
 gsap.from('.inclusion-footer .btn-primary', {
     scrollTrigger: { trigger: '.inclusion-footer', start: 'top 88%' },
@@ -289,7 +338,8 @@ gsap.from('.app-info', {
 });
 gsap.from('.app-feature-item', {
     scrollTrigger: { trigger: '.app-features', start: 'top 82%' },
-    autoAlpha: 0, y: 30, duration: 0.5, stagger: 0.15, ease: 'power2.out'
+    autoAlpha: 0, y: 30, duration: 0.5, stagger: 0.15, ease: 'power2.out',
+    clearProps: 'all'
 });
 gsap.from('.app-mockup', {
     scrollTrigger: { trigger: '.app-section', start: 'top 82%' },
@@ -370,7 +420,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
         if (href === '#') return;
-        
+
         const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
@@ -402,4 +452,42 @@ if (stickyFooter) {
             stickyFooter.style.transform = 'translateY(100%)';
         }
     });
+}
+
+// =====================================================
+// Testimonials Auto-Scroll Loop (Mobile Only)
+// =====================================================
+const transGrid = document.querySelector('.trans-grid');
+if (transGrid && window.innerWidth < 768) {
+    // Clone cards for infinite loop
+    const originalCards = Array.from(transGrid.children);
+    originalCards.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.remove('reveal-right', 'reveal-up', 'reveal-left');
+        clone.style.opacity = '1';
+        clone.style.visibility = 'visible';
+        transGrid.appendChild(clone);
+    });
+
+    let scrollSpeed = 1.0; 
+    let isPaused = false;
+
+    function scrollLoop() {
+        if (!isPaused) {
+            transGrid.scrollLeft += scrollSpeed;
+            if (transGrid.scrollLeft >= transGrid.scrollWidth / 2) {
+                transGrid.scrollLeft = 0;
+            }
+        }
+        requestAnimationFrame(scrollLoop);
+    }
+
+    transGrid.addEventListener('mouseenter', () => isPaused = true);
+    transGrid.addEventListener('mouseleave', () => isPaused = false);
+    transGrid.addEventListener('touchstart', () => isPaused = true, { passive: true });
+    transGrid.addEventListener('touchend', () => {
+        setTimeout(() => isPaused = false, 1500);
+    }, { passive: true });
+
+    scrollLoop();
 }
