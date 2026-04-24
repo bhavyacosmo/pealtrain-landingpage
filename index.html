@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peaktrain | Online Fitness Coaching for Busy Professionals</title>
-    <meta name="description" content="Sustainable fitness and nutrition coaching tailored for busy professionals. Get fit without giving up your lifestyle.">
+    <meta name="description"
+        content="Sustainable fitness and nutrition coaching tailored for busy professionals. Get fit without giving up your lifestyle.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <!-- Background Decorative Shapes -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
 
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
@@ -21,19 +27,23 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container hero-grid">
-            <div class="hero-content">
+            <div class="hero-content mobile-contents">
                 <div class="brand-logo reveal-up" style="margin-bottom: 2rem;">
                     <img src="Peak-Train-1.png" alt="Peaktrain Logo" style="height: 50px; width: auto; display: block;">
                 </div>
-                <h1 class="reveal-up">Indian Professionals: Get In The <span>Best Shape</span> Of Your Life.</h1>
-                <p class="reveal-up">Sustainable, evidence-based fitness coaching that fits your busy schedule. No restrictive diets. No soul-crushing workouts.</p>
+                <h1 class="hero-title reveal-up">Indian Professionals: Get In The <span>Best Shape</span> Of Your Life.
+                </h1>
+                <p class="hero-desc reveal-up">Sustainable, evidence-based fitness coaching that fits your busy
+                    schedule. No restrictive diets. No soul-crushing workouts.</p>
                 <ul class="usp-list">
-                    <li class="reveal-up"><i class="fas fa-check-circle"></i> Personalised Nutrition (Indian Meal Friendly)</li>
+                    <li class="reveal-up"><i class="fas fa-check-circle"></i> Personalised Nutrition (Indian Meal
+                        Friendly)</li>
                     <li class="reveal-up"><i class="fas fa-check-circle"></i> Time-Efficient Workouts (30-45 mins)</li>
                     <li class="reveal-up"><i class="fas fa-check-circle"></i> 1-on-1 Accountability & Support</li>
                 </ul>
-                <a href="#consultation" class="btn btn-primary reveal-up">Book a Free Consultation</a>
-                <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                <a href="#consultation" class="btn btn-primary hero-btn reveal-up">Book a Free Consultation</a>
+                <div class="hero-stats reveal-up"
+                    style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
                     <div style="display: flex;">
                         <i class="fas fa-star" style="color: #FFD700;"></i>
                         <i class="fas fa-star" style="color: #FFD700;"></i>
@@ -44,7 +54,8 @@
                     <span style="font-size: 0.9rem; font-weight: 600;">500+ Transformations Done</span>
                 </div>
             </div>
-            <div class="hero-image reveal-scale">
+            <div class="hero-image reveal-scale reveal-wrapper">
+                <div class="reveal-overlay"></div>
                 <img src="model-hero.png" alt="Fitness Professional" class="float-img">
             </div>
         </div>
@@ -59,12 +70,13 @@
             </div>
             <div class="trans-grid">
                 <!-- Case Study 1 -->
-                <div class="trans-card reveal-right">
+                <div class="trans-card reveal-right fluid-card">
                     <div class="trans-img-single">
                         <img src="IMG_6501.png" alt="Arjun's Transformation">
                     </div>
                     <h4>Vaishali Ahlawat, Engineer</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Sticking to the plan."</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Sticking to the plan."
+                    </p>
                     <div class="trans-data">
                         <div class="data-item">
                             <span>Weight Loss</span>
@@ -77,12 +89,13 @@
                     </div>
                 </div>
                 <!-- Case Study 2 -->
-                <div class="trans-card reveal-right">
+                <div class="trans-card reveal-right fluid-card">
                     <div class="trans-img-single">
                         <img src="PHOTO-2025-06-07-08-28-41-1.jpg" alt="Priyanka's Transformation">
                     </div>
                     <h4>Karan Singla, Marketing Executive</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Loose Body Fat + Fit back into his summer clothes."</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">"Loose Body Fat + Fit
+                        back into his summer clothes."</p>
                     <div class="trans-data">
                         <div class="data-item">
                             <span>Fat Loss</span>
@@ -95,7 +108,7 @@
                     </div>
                 </div>
                 <!-- Case Study 3 -->
-                <div class="trans-card reveal-right">
+                <div class="trans-card reveal-right fluid-card">
                     <div class="trans-img-single">
                         <img src="photo-output-3-1-974x1024.jpg" alt="Rahul's Transformation">
                     </div>
@@ -115,15 +128,16 @@
             </div>
         </div>
     </section>
-    
+
     <!-- The Right Plan Section (Pain Point Empathy) -->
     <section class="pain-point-section">
         <div class="container pain-point-grid">
             <div class="pain-point-content">
-                <h2>The Right Plan Changes Everything.</h2>
+                <h2 class="pain-point-title">The Right Plan Changes Everything.</h2>
                 <p class="pain-point-sub">That's why 500+ professionals chose Peaktrain.</p>
                 <div class="pain-point-text">
-                    Between 60-hour work weeks, constant calls, and quick office lunches, staying fit feels impossible. You try extreme diets, you slip on a Friday night, and you restart again on Monday. Sound familiar?
+                    Between 60-hour work weeks, constant calls, and quick office lunches, staying fit feels impossible.
+                    You try extreme diets, you slip on a Friday night, and you restart again on Monday. Sound familiar?
                 </div>
                 <div class="pain-point-text">
                     It's not your willpower that's broken — it's the cookie-cutter system you've been following.
@@ -131,17 +145,25 @@
                 <div class="pain-point-conclusion">
                     But the problem isn't you — it's the plan.
                 </div>
-                <div style="margin-top: 3rem;">
-                    <a href="#consultation" class="btn btn-primary" style="padding: 1.25rem 2.5rem;">Book Your Free Consultation</a>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; font-weight: 500;">Book Now & Get up to 30% Off</p>
+                <div class="mobile-cta-centered" style="margin-top: 3rem;">
+                    <a href="#consultation" class="btn btn-primary" style="padding: 1.25rem 2.5rem;">Book Your Free
+                        Consultation</a>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; font-weight: 500;">Book
+                        Now & Get up to 30% Off</p>
                 </div>
             </div>
             <div class="pain-point-image reveal-scale">
                 <img src="WhatsApp Image 2026-04-23 at 3.15.43 PM.jpeg" alt="Stressed Professional at Work">
-                <div class="loop-box-wrapper" style="margin-top: 2rem; width: 100%; text-align: left; background: white; padding: 1.5rem; border-radius: 16px;">
-                    <strong class="loop-title" style="margin-bottom: 1rem; font-size: 1rem;">You're stuck in the loop:</strong>
+                <div class="loop-box-wrapper"
+                    style="margin-top: 2rem; width: 100%; text-align: left; background: white; padding: 1.5rem; border-radius: 16px;">
+                    <strong class="loop-title" style="margin-bottom: 1rem; font-size: 1rem;">You're stuck in the
+                        loop:</strong>
                     <div class="loop-box">
-                        <span class="loop-item">Restrict</span> <span class="loop-arrow">&rarr;</span> <span class="loop-item">Crave</span> <span class="loop-arrow">&rarr;</span> <span class="loop-item">Binge</span> <span class="loop-arrow">&rarr;</span> <span class="loop-item">Guilt</span> <span class="loop-arrow">&rarr;</span> <span class="loop-item">Repeat</span>
+                        <span class="loop-item">Restrict</span> <span class="loop-arrow">&rarr;</span> <span
+                            class="loop-item">Crave</span> <span class="loop-arrow">&rarr;</span> <span
+                            class="loop-item">Binge</span> <span class="loop-arrow">&rarr;</span> <span
+                            class="loop-item">Guilt</span> <span class="loop-arrow">&rarr;</span> <span
+                            class="loop-item">Repeat</span>
                     </div>
                 </div>
             </div>
@@ -157,10 +179,13 @@
                     <span class="method-subtitle">Let's change that</span>
                     <h2 class="method-title-large">Lose Weight the Desi Way - <br>No Gym. No Gimmicks.</h2>
                     <div class="method-formula-bar">Peaktrain's 5-Step Formula: Assess. Plan. Fuel. Train. Evolve.</div>
-                    <p class="method-desc">Peaktrain weight loss plans follow a simple 5-step method that fits into your everyday life. No crash diets. No 5 AM workouts. Just simple Indian meals and expert support that fits your life.</p>
+                    <p class="method-desc">Peaktrain weight loss plans follow a simple 5-step method that fits into your
+                        everyday life. No crash diets. No 5 AM workouts. Just simple Indian meals and expert support
+                        that fits your life.</p>
                 </div>
                 <div class="method-image-bottom reveal-up" style="margin-top: 3rem;">
-                    <img src="f54e942b-9b70-442c-b0c7-bd910349ffad.jpg" alt="Healthy Indian Thali" class="method-rounded-img">
+                    <img src="group-outside-doing-moderate-exercise-1296x728-header-1296x729.webp"
+                        alt="Healthy Indian Thali" class="method-rounded-img">
                 </div>
             </div>
 
@@ -171,42 +196,47 @@
                         <div class="step-number">01</div>
                         <div class="step-card-content">
                             <h4>Deep Assessment</h4>
-                            <p>We analyze your metabolism, dietary habits, stress levels, and work schedule to find what works for YOU.</p>
+                            <p>We analyze your metabolism, dietary habits, stress levels, and work schedule to find what
+                                works for YOU.</p>
                         </div>
                     </div>
                     <div class="method-step-card reveal-right">
                         <div class="step-number">02</div>
                         <div class="step-card-content">
                             <h4>Custom Roadmap</h4>
-                            <p>A personalized blueprint that integrates fitness into your existing life, not the other way around.</p>
+                            <p>A personalized blueprint that integrates fitness into your existing life, not the other
+                                way around.</p>
                         </div>
                     </div>
                     <div class="method-step-card reveal-right">
                         <div class="step-number">03</div>
                         <div class="step-card-content">
                             <h4>Sustainable Nutrition</h4>
-                            <p>Enjoy Indian home food. No starving. No boring boiled food. We teach you how to track for permanent loss.</p>
+                            <p>Enjoy Indian home food. No starving. No boring boiled food. We teach you how to track for
+                                permanent loss.</p>
                         </div>
                     </div>
                     <div class="method-step-card reveal-right">
                         <div class="step-number">04</div>
                         <div class="step-card-content">
                             <h4>Guided Execution</h4>
-                            <p>Precise workout plans (Home/Gym) synced with your energy levels and professional availability.</p>
+                            <p>Precise workout plans (Home/Gym) synced with your energy levels and professional
+                                availability.</p>
                         </div>
                     </div>
                     <div class="method-step-card reveal-right">
                         <div class="step-number">05</div>
                         <div class="step-card-content">
                             <h4>Evolution</h4>
-                            <p>Weekly check-ins and data-driven adjustments from your coach to keep you progressing indefinitely.</p>
+                            <p>Weekly check-ins and data-driven adjustments from your coach to keep you progressing
+                                indefinitely.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
- 
+
     <!-- Comparison Section -->
     <section class="comparison-section">
         <div class="container comparison-container">
@@ -214,7 +244,7 @@
                 <h2>Why Choose <span>Peaktrain?</span></h2>
                 <p>How we compare against other common fitness and weight loss approaches.</p>
             </div>
-            
+
             <div class="comparison-wrapper">
                 <div class="comparison-table">
                     <!-- Column headers -->
@@ -314,32 +344,102 @@
                         <div><i class="fas fa-times-circle"></i> No scientific base</div>
                     </div>
                 </div>
-                <!-- Mobile-Only Comparison Cards -->
+                <!-- Mobile-Only Comparison Cards (Redesigned) -->
                 <div class="comparison-mobile-cards">
+                    <!-- Card 1 -->
                     <div class="comp-mobile-card">
-                        <h4><i class="fas fa-user-check"></i> Personalized Plans</h4>
-                        <div class="comp-mobile-item peak"><i class="fas fa-check-circle"></i> Yes, based on your desk lifestyle</div>
-                        <div class="comp-mobile-item others"><i class="fas fa-times-circle"></i> Generic PDFs</div>
+                        <div class="comp-mobile-header">PERSONALIZED PLANS</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Generic PDFs & Blog-based advice
+                                </div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> Precise plans based on your desk
+                                    lifestyle</div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Card 2 -->
                     <div class="comp-mobile-card">
-                        <h4><i class="fas fa-users"></i> Human Accountability</h4>
-                        <div class="comp-mobile-item peak"><i class="fas fa-check-circle"></i> Dedicated 1-on-1 Coach</div>
-                        <div class="comp-mobile-item others"><i class="fas fa-times-circle"></i> Bot or No Contact</div>
+                        <div class="comp-mobile-header">ACCOUNTABILITY</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Bots, limited access or no contact
+                                </div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> Dedicated 1-on-1 human coach</div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Card 3 -->
                     <div class="comp-mobile-card">
-                        <h4><i class="fas fa-utensils"></i> Indian & Cheat Meals</h4>
-                        <div class="comp-mobile-item peak"><i class="fas fa-check-circle"></i> Maggi, Chole Bhature allowed</div>
-                        <div class="comp-mobile-item others"><i class="fas fa-exclamation-circle"></i> Boiled food only</div>
+                        <div class="comp-mobile-header">DIET FLEXIBILITY</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Over-restrictive or boiled-only food
+                                </div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> Indian meals like Maggi & Chole
+                                    Bhature allowed</div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Card 4 -->
                     <div class="comp-mobile-card">
-                        <h4><i class="fas fa-clock"></i> Time Efficient</h4>
-                        <div class="comp-mobile-item peak"><i class="fas fa-check-circle"></i> 30-45m at home</div>
-                        <div class="comp-mobile-item others"><i class="fas fa-exclamation-circle"></i> Gym upsells</div>
+                        <div class="comp-mobile-header">TIME EFFICIENCY</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Supplement upsells & un-structured
+                                    gym plans</div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> 30-45m at-home workout blueprint
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Card 5 -->
                     <div class="comp-mobile-card">
-                        <h4><i class="fas fa-chart-line"></i> Real Progress</h4>
-                        <div class="comp-mobile-item peak"><i class="fas fa-check-circle"></i> Data-driven via App</div>
-                        <div class="comp-mobile-item others"><i class="fas fa-exclamation-circle"></i> Limited proof</div>
+                        <div class="comp-mobile-header">REAL PROGRESS</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Followers ≠ Results; unverified proof
+                                </div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> Data-driven tracking via the
+                                    Peaktrain App</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="comp-mobile-card">
+                        <div class="comp-mobile-header">EXPERT-BACKED</div>
+                        <div class="comp-mobile-body">
+                            <div class="comp-row-mobile">
+                                <span class="comp-label">OTHERS</span>
+                                <div class="comp-val"><i class="fas fa-times"></i> Influencer-led with no scientific
+                                    base</div>
+                            </div>
+                            <div class="comp-row-mobile peak">
+                                <span class="comp-label">PEAKTRAIN</span>
+                                <div class="comp-val"><i class="fas fa-check"></i> Qualified Nutritionist + Lifestyle
+                                    Coach</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -354,31 +454,41 @@
                     <span class="inclusion-tag">What You Get With</span>
                     <h2>Peaktrain's Weight Loss Plan</h2>
                     <p class="inclusion-highlight">Experience India's most sustainable coaching platform.</p>
-                    
+
                     <h4 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Includes:</h4>
                     <div class="inclusion-list">
-                        <div class="inclusion-item"><i class="fas fa-check"></i> 1-on-1 Consultation with a Lead Coach</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Personalized Diet Plan tailored to your lifestyle</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Time-Efficient Workout Blueprint (Home/Gym)</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Full Access to the Peaktrain App for tracking</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Sync with Apple Health & Google Fit</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> 24x7 Expert Chat Support whenever you need</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Weekly Video Check-ins for constant guidance</div>
-                        <div class="inclusion-item"><i class="fas fa-check"></i> Hand-held support for holistic wellness</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> 1-on-1 Consultation with a Lead Coach
+                        </div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Personalized Diet Plan tailored to your
+                            lifestyle</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Time-Efficient Workout Blueprint
+                            (Home/Gym)</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Full Access to the Peaktrain App for
+                            tracking</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Sync with Apple Health & Google Fit
+                        </div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> 24x7 Expert Chat Support whenever you
+                            need</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Weekly Video Check-ins for constant
+                            guidance</div>
+                        <div class="inclusion-item"><i class="fas fa-check"></i> Hand-held support for holistic wellness
+                        </div>
                     </div>
                 </div>
                 <div class="inclusion-image">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="Professional Health Coach">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop"
+                        alt="Professional Health Coach">
                 </div>
             </div>
             <div class="inclusion-footer">
-                <a href="#consultation" class="btn btn-primary" style="padding: 1.25rem 3.5rem;">Book Your Free Consultation</a>
+                <a href="#consultation" class="btn btn-primary" style="padding: 1.25rem 3.5rem;">Book Your Free
+                    Consultation</a>
                 <p>Book Now & Get up to 30% Off</p>
             </div>
         </div>
     </section>
- 
-   
+
+
 
     <!-- Founders Story Section -->
     <section class="founders-section" id="about">
@@ -387,12 +497,19 @@
             <div class="container founders-intro-grid">
                 <div class="founders-text">
                     <h2 class="founders-title">The Story Behind Peak Train – <br><span>Meet The Founders</span></h2>
-                    
+
                     <div class="founders-content">
                         <h3 class="founders-subtitle">Meet Sid & Vera – The Minds Behind Peak Train</h3>
-                        <p>Peak Train was built out of frustration with generic, cookie-cutter fitness programs that overpromise and underdeliver. Sid and Vera have spent years in the fitness industry, seeing people struggle with unsustainable plans, misleading information, and lack of real accountability.</p>
-                        <p><strong>Sid (Siddhartha Singh)</strong> – A coach who's spent 15+ years in the fitness space, helping people break past plateaus and build sustainable strength. His approach? Cut the fluff, keep it real, and make fitness fit into your life—not the other way around.</p>
-                        <p><strong>Vera Puri</strong> – A Coach who's transformed countless clients by making nutrition practical, flexible, and results-driven. Her philosophy? Ditch the extremes, build habits that last, and eat in a way that fuels your goals without feeling restrictive.</p>
+                        <p>Peak Train was built out of frustration with generic, cookie-cutter fitness programs that
+                            overpromise and underdeliver. Sid and Vera have spent years in the fitness industry, seeing
+                            people struggle with unsustainable plans, misleading information, and lack of real
+                            accountability.</p>
+                        <p><strong>Sid (Siddhartha Singh)</strong> – A coach who's spent 15+ years in the fitness space,
+                            helping people break past plateaus and build sustainable strength. His approach? Cut the
+                            fluff, keep it real, and make fitness fit into your life—not the other way around.</p>
+                        <p><strong>Vera Puri</strong> – A Coach who's transformed countless clients by making nutrition
+                            practical, flexible, and results-driven. Her philosophy? Ditch the extremes, build habits
+                            that last, and eat in a way that fuels your goals without feeling restrictive.</p>
                     </div>
                 </div>
                 <div class="founders-image">
@@ -431,7 +548,8 @@
 
                     <!-- Column 2: The Solution -->
                     <div class="philosophy-col solution-col">
-                        <h4>Peak Train Was Designed To Fix All Of That. It's A Structured, High-Touch Coaching System Where Every Client Gets</h4>
+                        <h4>Peak Train Was Designed To Fix All Of That. It's A Structured, High-Touch Coaching System
+                            Where Every Client Gets</h4>
                         <ul class="solution-list">
                             <li>
                                 <i class="fas fa-check-circle"></i>
@@ -450,170 +568,206 @@
                 </div>
             </div>
         </div>
-    <!-- What Happens After You Join Section (Timeline) -->
-    <section class="timeline-section" id="how-it-works">
-        <div class="container timeline-grid">
-            <!-- Left Side: Sticky Title Card -->
-            <div class="timeline-left">
-                <div class="timeline-title-card">
-                    <h2>What Happens After You Join <span>Peak Train?</span></h2>
+        <!-- What Happens After You Join Section (Timeline) -->
+        <section class="timeline-section" id="how-it-works">
+            <div class="container timeline-grid">
+                <!-- Left Side: Sticky Title Card -->
+                <div class="timeline-left">
+                    <div class="timeline-title-card">
+                        <h2>What Happens After You Join <span>Peak Train?</span></h2>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Right Side: Vertical Timeline -->
-            <div class="timeline-right">
-                <div class="timeline-line"></div>
-                <div class="timeline-steps">
-                    <!-- Step 1 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker"></div>
-                        <div class="step-label">Step 1</div>
-                        <div class="step-card">
-                            <h4>Deep Assessment & 1-on-1 Call</h4>
-                            <p>Your journey begins with an in-depth analysis of your metabolism, work schedule, and health markers by our expert coaches.</p>
-                            <p>At Peak Train, we analyze your bio-data to ensure your plan is truly 100% personalized from day one. No generic start.</p>
+                <!-- Right Side: Vertical Timeline -->
+                <div class="timeline-right">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-steps">
+                        <!-- Step 1 -->
+                        <div class="timeline-step">
+                            <div class="timeline-marker"></div>
+                            <div class="step-label">Step 1</div>
+                            <div class="step-card">
+                                <h4>Deep Assessment & 1-on-1 Call</h4>
+                                <p>Your journey begins with an in-depth analysis of your metabolism, work schedule, and
+                                    health markers by our expert coaches.</p>
+                                <p>At Peak Train, we analyze your bio-data to ensure your plan is truly 100%
+                                    personalized from day one. No generic start.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="timeline-step">
+                            <div class="timeline-marker"></div>
+                            <div class="step-label">Step 2</div>
+                            <div class="step-card">
+                                <h4>Customized Lifestyle Blueprint</h4>
+                                <p>Receive a personalized nutrition and workout plan tailored to your preferences,
+                                    ensuring results without sacrificing your social life.</p>
+                                <p>Start your fat loss journey with home-cooked food, zero mandatory supplements, and
+                                    exercises that actually fit your schedule.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="timeline-step">
+                            <div class="timeline-marker"></div>
+                            <div class="step-label">Step 3</div>
+                            <div class="step-card">
+                                <h4>App-Based Tracking & Weekly Reviews</h4>
+                                <p>Log your meals and workouts in the Peaktrain App. Your dedicated coach reviews your
+                                    progress weekly and adjusts your plan accordingly.</p>
+                                <p>Update and track your progress daily on the app. Based on your data, your coach
+                                    conducts weekly catch-ups to understand your hurdles.</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="timeline-step">
+                            <div class="timeline-marker"></div>
+                            <div class="step-label">Step 4</div>
+                            <div class="step-card">
+                                <h4>Sustainable Results & 24x7 Support</h4>
+                                <p>Experience visible health changes and consistent energy levels with round-the-clock
+                                    expert support through our chat feature.</p>
+                                <p>With a personalized approach and dedicated assistance, Peak Train ensures you see
+                                    visible health results leading to a healthy lifestyle.</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- Step 2 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker"></div>
-                        <div class="step-label">Step 2</div>
-                        <div class="step-card">
-                            <h4>Customized Lifestyle Blueprint</h4>
-                            <p>Receive a personalized nutrition and workout plan tailored to your preferences, ensuring results without sacrificing your social life.</p>
-                            <p>Start your fat loss journey with home-cooked food, zero mandatory supplements, and exercises that actually fit your schedule.</p>
+
+        <!-- App Showcase Section -->
+        <section class="app-section">
+            <div class="container app-grid">
+                <div class="app-info">
+                    <div class="tag"
+                        style="background: rgba(230, 109, 27, 0.2); color: var(--primary-light); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem;">
+                        THE PEAK TRAIN APP</div>
+                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Everything You Need, <span>In Your
+                            Pocket.</span></h2>
+                    <div class="app-features">
+                        <div class="app-feature-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h4>Workout Tracking</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Log sets, reps, and weights with video
+                                demonstrations for every exercise.</p>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-apple-alt"></i>
+                            <h4>Meal Database</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Extensive Indian food database for accurate
+                                macro tracking.</p>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-comments"></i>
+                            <h4>24/7 Chat Support</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Instantly connect with your coach for guidance
+                                and motivation.</p>
+                        </div>
+                        <div class="app-feature-item">
+                            <i class="fas fa-sync"></i>
+                            <h4>Progress Sync</h4>
+                            <p style="font-size: 0.9rem; opacity: 0.8;">Sync with Apple Health & Google Fit to track
+                                your daily steps and sleep.</p>
                         </div>
                     </div>
+                </div>
+                <div class="app-mockup reveal-scale">
+                    <img src="Screenshot-2025-07-30-125537.png" alt="App Mockup" class="float-img">
+                </div>
+            </div>
+        </section>
 
-                    <!-- Step 3 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker"></div>
-                        <div class="step-label">Step 3</div>
-                        <div class="step-card">
-                            <h4>App-Based Tracking & Weekly Reviews</h4>
-                            <p>Log your meals and workouts in the Peaktrain App. Your dedicated coach reviews your progress weekly and adjusts your plan accordingly.</p>
-                            <p>Update and track your progress daily on the app. Based on your data, your coach conducts weekly catch-ups to understand your hurdles.</p>
-                        </div>
+        <!-- Typeform Section -->
+        <section class="typeform-section section-padding" id="consultation">
+            <div class="container">
+                <div class="section-title reveal-up">
+                    <h2>Ready to Start Your <span>Transformation?</span></h2>
+                    <p>Fill out this quick form and we'll reach out to book your free 1-on-1 consultation call.</p>
+                </div>
+                <div class="typeform-wrapper reveal-up">
+                    <!-- Minimalist Embed: Hides headers and footers to prevent scrolling -->
+                    <div data-tf-widget="KhkmFqF7" data-tf-opacity="100" data-tf-hide-headers data-tf-hide-footer
+                        style="width:100%;height:450px;"></div>
+                    <script src="https://embed.typeform.com/next/embed.js"></script>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Frequently Asked <span>Questions</span></h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">I have a busy schedule. Will this actually work? <i
+                                class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Absolutely. We specialize in coaching busy professionals. Our workouts
+                            are 30-45 mins long, and our nutrition plans are built around simple, home-cooked Indian
+                            meals that require zero extra prep time.</div>
                     </div>
-
-                    <!-- Step 4 -->
-                    <div class="timeline-step">
-                        <div class="timeline-marker"></div>
-                        <div class="step-label">Step 4</div>
-                        <div class="step-card">
-                            <h4>Sustainable Results & 24x7 Support</h4>
-                            <p>Experience visible health changes and consistent energy levels with round-the-clock expert support through our chat feature.</p>
-                            <p>With a personalized approach and dedicated assistance, Peak Train ensures you see visible health results leading to a healthy lifestyle.</p>
-                        </div>
+                    <div class="faq-item">
+                        <div class="faq-question">I've tried everything. What makes this different? <i
+                                class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Most programs fail because they lack accountability. Peak Train provides
+                            elite 1-on-1 human coaching. Your coach monitors your data daily and adjusts the plan in
+                            real-time based on your work stress, travel, and lifestyle.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Will I have to give up all my favorite foods? <i
+                                class="fas fa-plus"></i></div>
+                        <div class="faq-answer">No. We follow a "flexible dieting" approach. We teach you how to include
+                            pizza, desserts, and your favorite Indian snacks while still hitting your fat loss goals.
+                            Sustainability is our #1 priority.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is this only for people with major weight issues? <i
+                                class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Not at all. We help everyone—from CEOs looking to lose that last 5kg of
+                            belly fat to professionals looking to build muscle, improve their energy levels, and fix
+                            their relationship with food.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do I need to join a gym or buy supplements? <i
+                                class="fas fa-plus"></i></div>
+                        <div class="faq-answer">No. Many of our clients get incredible results working out at home with
+                            zero equipment. Supplements are 100% optional; we focus on real, whole foods to drive 95% of
+                            your results.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What if I fall off track? <i class="fas fa-plus"></i></div>
+                        <div class="faq-answer">Life happens. That's exactly why you have a coach. Instead of waiting
+                            for "next Monday," your coach helps you recalibrate immediately without any guilt or
+                            judgment, ensuring a bad meal doesn't turn into a bad week.</div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+
+
+        <!-- Sticky Footer -->
+        <div class="sticky-footer">
+            <div class="container"
+                style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <div style="font-size: 0.8rem; font-weight: 600;">
+                    Limited Slots, <span style="color: var(--primary);">Book Now!</span>
+                </div>
+                <a href="#consultation" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Book
+                    Consultation</a>
             </div>
         </div>
-    </section>
 
+        <!-- GSAP for Premium Animations -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-     <!-- App Showcase Section -->
-    <section class="app-section">
-        <div class="container app-grid">
-            <div class="app-info">
-                <div class="tag" style="background: rgba(230, 109, 27, 0.2); color: var(--primary-light); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem;">THE PEAK TRAIN APP</div>
-                <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Everything You Need, <span>In Your Pocket.</span></h2>
-                <div class="app-features">
-                    <div class="app-feature-item">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Workout Tracking</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.8;">Log sets, reps, and weights with video demonstrations for every exercise.</p>
-                    </div>
-                    <div class="app-feature-item">
-                        <i class="fas fa-apple-alt"></i>
-                        <h4>Meal Database</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.8;">Extensive Indian food database for accurate macro tracking.</p>
-                    </div>
-                    <div class="app-feature-item">
-                        <i class="fas fa-comments"></i>
-                        <h4>24/7 Chat Support</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.8;">Instantly connect with your coach for guidance and motivation.</p>
-                    </div>
-                    <div class="app-feature-item">
-                        <i class="fas fa-sync"></i>
-                        <h4>Progress Sync</h4>
-                        <p style="font-size: 0.9rem; opacity: 0.8;">Sync with Apple Health & Google Fit to track your daily steps and sleep.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="app-mockup reveal-scale">
-                <img src="Screenshot-2025-07-30-125537.png" alt="App Mockup" class="float-img">
-            </div>
-        </div>
-    </section>
-    
-    <!-- Typeform Section -->
-    <section class="typeform-section section-padding" id="consultation">
-        <div class="container">
-            <div class="section-title reveal-up">
-                <h2>Ready to Start Your <span>Transformation?</span></h2>
-                <p>Fill out this quick form and we'll reach out to book your free 1-on-1 consultation call.</p>
-            </div>
-            <div class="typeform-wrapper reveal-up">
-                <!-- Minimalist Embed: Hides headers and footers to prevent scrolling -->
-                <div data-tf-widget="KhkmFqF7" data-tf-opacity="100" data-tf-hide-headers data-tf-hide-footer style="width:100%;height:450px;"></div>
-                <script src="https://embed.typeform.com/next/embed.js"></script>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked <span>Questions</span></h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">I have a busy schedule. Will this actually work? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Absolutely. We specialize in coaching busy professionals. Our workouts are 30-45 mins long, and our nutrition plans are built around simple, home-cooked Indian meals that require zero extra prep time.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">I've tried everything. What makes this different? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Most programs fail because they lack accountability. Peak Train provides elite 1-on-1 human coaching. Your coach monitors your data daily and adjusts the plan in real-time based on your work stress, travel, and lifestyle.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Will I have to give up all my favorite foods? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">No. We follow a "flexible dieting" approach. We teach you how to include pizza, desserts, and your favorite Indian snacks while still hitting your fat loss goals. Sustainability is our #1 priority.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Is this only for people with major weight issues? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Not at all. We help everyone—from CEOs looking to lose that last 5kg of belly fat to professionals looking to build muscle, improve their energy levels, and fix their relationship with food.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">Do I need to join a gym or buy supplements? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">No. Many of our clients get incredible results working out at home with zero equipment. Supplements are 100% optional; we focus on real, whole foods to drive 95% of your results.</div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">What if I fall off track? <i class="fas fa-plus"></i></div>
-                    <div class="faq-answer">Life happens. That's exactly why you have a coach. Instead of waiting for "next Monday," your coach helps you recalibrate immediately without any guilt or judgment, ensuring a bad meal doesn't turn into a bad week.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-   
-    <!-- Sticky Footer -->
-    <div class="sticky-footer">
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-            <div style="display: none; font-size: 0.8rem; font-weight: 600;" id="timer-box">
-                Offer ends in: <span id="timer" style="color: var(--primary);">29:59</span>
-            </div>
-            <a href="#consultation" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">Book Consultation</a>
-        </div>
-    </div>
-
-    <!-- GSAP for Premium Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
+
 </html>

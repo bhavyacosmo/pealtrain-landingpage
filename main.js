@@ -223,10 +223,10 @@ compRows.forEach((cell, i) => {
     const rowCells = [cell, cell.nextElementSibling, cell.nextElementSibling?.nextElementSibling, cell.nextElementSibling?.nextElementSibling?.nextElementSibling, cell.nextElementSibling?.nextElementSibling?.nextElementSibling?.nextElementSibling];
 
     gsap.from(rowCells, {
-        scrollTrigger: { 
-            trigger: cell, 
+        scrollTrigger: {
+            trigger: cell,
             start: 'top 92%', // Trigger slightly earlier
-            toggleActions: 'play none none none' 
+            toggleActions: 'play none none none'
         },
         opacity: 0,
         y: 15,
@@ -389,26 +389,7 @@ document.querySelectorAll('.faq-question').forEach(item => {
     });
 });
 
-// =====================================================
-// Countdown Timer
-// =====================================================
-function startTimer(duration, display) {
-    let timer = duration;
-    setInterval(() => {
-        const minutes = String(parseInt(timer / 60, 10)).padStart(2, '0');
-        const seconds = String(parseInt(timer % 60, 10)).padStart(2, '0');
-        display.textContent = minutes + ':' + seconds;
-        if (--timer < 0) timer = duration;
-    }, 1000);
-}
-
-window.addEventListener('load', () => {
-    const timerDisplay = document.querySelector('#timer');
-    if (timerDisplay) {
-        startTimer(30 * 60, timerDisplay);
-        document.querySelector('#timer-box').style.display = 'block';
-    }
-});
+// Countdown Timer removed as requested
 
 // =====================================================
 // Smooth CTA Scroll
@@ -455,10 +436,10 @@ if (stickyFooter) {
 }
 
 // =====================================================
-// Testimonials Auto-Scroll Loop (Mobile Only)
+// Testimonials Auto-Scroll Loop (All Devices)
 // =====================================================
 const transGrid = document.querySelector('.trans-grid');
-if (transGrid && window.innerWidth < 768) {
+if (transGrid) {
     // Clone cards for infinite loop
     const originalCards = Array.from(transGrid.children);
     originalCards.forEach(card => {
@@ -469,7 +450,7 @@ if (transGrid && window.innerWidth < 768) {
         transGrid.appendChild(clone);
     });
 
-    let scrollSpeed = 1.0; 
+    let scrollSpeed = 1.0;
     let isPaused = false;
 
     function scrollLoop() {
@@ -491,3 +472,74 @@ if (transGrid && window.innerWidth < 768) {
 
     scrollLoop();
 }
+
+// =====================================================
+// IMAGE SWIPE REVEAL ANIMATION
+// =====================================================
+gsap.utils.toArray('.reveal-wrapper').forEach(wrapper => {
+    const overlay = wrapper.querySelector('.reveal-overlay');
+    const img = wrapper.querySelector('img');
+    
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: wrapper,
+            start: 'top 80%',
+            toggleActions: 'play none none none'
+        }
+    });
+
+    tl.to(overlay, { scaleX: 1, duration: 0.6, ease: 'power2.inOut' })
+      .set(img, { opacity: 1 })
+      .to(overlay, { scaleX: 0, transformOrigin: 'right', duration: 0.6, ease: 'power2.inOut' });
+});
+
+// =====================================================
+// FLUID SCROLL SKEW EFFECT (Premium Feel)
+// =====================================================
+let proxy = { skew: 0 },
+    skewSetter = gsap.quickSetter(".fluid-card", "skewY", "deg"),
+    clamp = gsap.utils.clamp(-5, 5); // Don't let it skew too much
+
+ScrollTrigger.create({
+  onUpdate: (self) => {
+    let skew = clamp(self.getVelocity() / -300);
+    if (Math.abs(skew) > Math.abs(proxy.skew)) {
+      proxy.skew = skew;
+      gsap.to(proxy, {
+          skew: 0, 
+          duration: 0.8, 
+          ease: "power3", 
+          overwrite: true, 
+          onUpdate: () => skewSetter(proxy.skew) 
+      });
+    }
+  }
+});
+
+// Set initial state for reveal images (if needed)
+gsap.set('.reveal-wrapper img', { opacity: 0 });
+
+// =====================================================
+// FLOATING BACKGROUND SHAPES (Parallax)
+// =====================================================
+gsap.to('.shape-1', {
+    y: 100,
+    x: 50,
+    scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 2
+    }
+});
+
+gsap.to('.shape-2', {
+    y: -150,
+    x: -80,
+    scrollTrigger: {
+        trigger: 'body',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 2
+    }
+});
