@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
 gsap.set(['.brand-logo', '.hero-content h1', '.hero-content p', '.usp-list li', '.hero-content .btn-primary', '.hero-content [style*="margin-top: 1.5rem"]'], {
     autoAlpha: 0, y: 30
 });
-gsap.set('.hero-image', { autoAlpha: 0, x: 80, scale: 0.9 });
+gsap.set('.hero-image', { autoAlpha: 0, y: 50, scale: 0.9 });
 
 // =====================================================
 // HERO SECTION – Staggered Entry Animations
@@ -34,7 +34,7 @@ heroTl
     .to('.usp-list li', { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.12, ease: 'power2.out' }, '-=0.3')
     .to('.hero-content .btn-primary', { autoAlpha: 1, y: 0, duration: 0.5, ease: 'back.out(1.7)' }, '-=0.1')
     .to('.hero-content [style*="margin-top: 1.5rem"]', { autoAlpha: 1, y: 0, duration: 0.5 }, '-=0.1')
-    .to('.hero-image', { autoAlpha: 1, x: 0, scale: 1, duration: 1, ease: 'power3.out' }, '-=0.8');
+    .to('.hero-image', { autoAlpha: 1, y: 0, scale: 1, duration: 1, ease: 'power3.out' }, '-=0.8');
 
 // Parallax disabled to stabilize image as requested
 /*
@@ -128,7 +128,7 @@ gsap.utils.toArray('.section-title').forEach(el => {
 // =====================================================
 gsap.from('.trans-card', {
     scrollTrigger: { trigger: '.trans-grid', start: 'top 82%', toggleActions: 'play none none none' },
-    autoAlpha: 0, x: 60, duration: 0.7, stagger: 0.2, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.7, stagger: 0.2, ease: 'power3.out'
 });
 
 // =====================================================
@@ -148,7 +148,7 @@ gsap.from('.pain-point-text', {
 });
 gsap.from('.loop-box', {
     scrollTrigger: { trigger: '.loop-box', start: 'top 88%' },
-    autoAlpha: 0, x: -40, duration: 0.7, ease: 'back.out(1.5)'
+    autoAlpha: 0, y: 30, duration: 0.7, ease: 'back.out(1.5)'
 });
 gsap.from('.pain-point-conclusion', {
     scrollTrigger: { trigger: '.pain-point-conclusion', start: 'top 88%' },
@@ -185,7 +185,7 @@ if (painPointBtn) painPointBtn.classList.add('shimmer');
 // =====================================================
 gsap.from('.method-side-img', {
     scrollTrigger: { trigger: '.method-section', start: 'top 78%' },
-    autoAlpha: 0, x: -80, duration: 1, ease: 'power3.out'
+    autoAlpha: 0, y: 50, duration: 1, ease: 'power3.out'
 });
 gsap.from('.method-subtitle', {
     scrollTrigger: { trigger: '.method-section', start: 'top 75%' },
@@ -201,7 +201,7 @@ gsap.from('.method-formula-bar', {
 });
 gsap.from('.method-step-row', {
     scrollTrigger: { trigger: '.method-steps-list', start: 'top 82%' },
-    autoAlpha: 0, x: 30, duration: 0.5, stagger: 0.15, ease: 'power2.out'
+    autoAlpha: 0, y: 30, duration: 0.5, stagger: 0.15, ease: 'power2.out'
 });
 /* 
 gsap.to('.method-side-img img', {
@@ -255,19 +255,19 @@ compRows.forEach((cell, i) => {
 });
 
 // =====================================================
-// INCLUSION SECTION – Split Reveal + Parallax
+// INCLUSION SECTION – Cards Reveal
 // =====================================================
 gsap.from('.inclusion-content', {
     scrollTrigger: { trigger: '.inclusion-section', start: 'top 78%' },
-    autoAlpha: 0, x: -60, duration: 0.9, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.9, ease: 'power3.out'
 });
-gsap.from('.inclusion-item', {
-    scrollTrigger: { trigger: '.inclusion-list', start: 'top 82%' },
-    autoAlpha: 0, x: -25, duration: 0.4, stagger: 0.09, ease: 'power2.out'
+gsap.from('.inclusion-card', {
+    scrollTrigger: { trigger: '.inclusion-cards-wrapper', start: 'top 82%' },
+    autoAlpha: 0, y: 30, duration: 0.6, stagger: 0.12, ease: 'power2.out'
 });
 gsap.from('.inclusion-image', {
     scrollTrigger: { trigger: '.inclusion-section', start: 'top 78%' },
-    autoAlpha: 0, x: 60, duration: 0.9, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.9, ease: 'power3.out'
 });
 /* 
 gsap.to('.inclusion-image img', {
@@ -294,7 +294,7 @@ gsap.from('.founders-content p', {
 });
 gsap.from('.founders-image', {
     scrollTrigger: { trigger: '.founders-section', start: 'top 78%' },
-    autoAlpha: 0, x: 80, duration: 1, ease: 'power3.out'
+    autoAlpha: 0, y: 50, duration: 1, ease: 'power3.out'
 });
 gsap.from('.philosophy-col', {
     scrollTrigger: { trigger: '.philosophy-grid', start: 'top 82%' },
@@ -303,12 +303,21 @@ gsap.from('.philosophy-col', {
 // Gap/Solution list items stagger
 gsap.from('.gap-list li, .solution-list li', {
     scrollTrigger: { trigger: '.philosophy-grid', start: 'top 78%' },
-    autoAlpha: 0, x: -20, duration: 0.4, stagger: 0.1, ease: 'power2.out'
+    autoAlpha: 0, y: 30, duration: 0.4, stagger: 0.1, ease: 'power2.out'
 });
 
 // =====================================================
-// TIMELINE SECTION – Line Draw + Card Reveals
+// TIMELINE SECTION – Pinned Parallax + Line Draw
 // =====================================================
+if (window.innerWidth > 992) {
+    ScrollTrigger.create({
+        trigger: ".timeline-section",
+        start: "top 100px",
+        pin: ".timeline-left",
+        pinSpacing: false,
+        end: "bottom 80%"
+    });
+}
 gsap.fromTo('.timeline-line',
     { scaleY: 0, transformOrigin: 'top center' },
     {
@@ -318,11 +327,11 @@ gsap.fromTo('.timeline-line',
 );
 gsap.from('.timeline-title-card', {
     scrollTrigger: { trigger: '.timeline-section', start: 'top 82%' },
-    autoAlpha: 0, x: -50, duration: 0.9, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.9, ease: 'power3.out'
 });
 gsap.from('.timeline-step', {
     scrollTrigger: { trigger: '.timeline-steps', start: 'top 82%', toggleActions: 'play none none none' },
-    autoAlpha: 0, x: 50, duration: 0.6, stagger: 0.25, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.6, stagger: 0.25, ease: 'power3.out'
 });
 gsap.from('.timeline-marker', {
     scrollTrigger: { trigger: '.timeline-steps', start: 'top 82%', toggleActions: 'play none none none' },
@@ -334,7 +343,7 @@ gsap.from('.timeline-marker', {
 // =====================================================
 gsap.from('.app-info', {
     scrollTrigger: { trigger: '.app-section', start: 'top 82%' },
-    autoAlpha: 0, x: -60, duration: 0.9, ease: 'power3.out'
+    autoAlpha: 0, y: 40, duration: 0.9, ease: 'power3.out'
 });
 gsap.from('.app-feature-item', {
     scrollTrigger: { trigger: '.app-features', start: 'top 82%' },
@@ -479,7 +488,7 @@ if (transGrid) {
 gsap.utils.toArray('.reveal-wrapper').forEach(wrapper => {
     const overlay = wrapper.querySelector('.reveal-overlay');
     const img = wrapper.querySelector('img');
-    
+
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: wrapper,
@@ -489,8 +498,8 @@ gsap.utils.toArray('.reveal-wrapper').forEach(wrapper => {
     });
 
     tl.to(overlay, { scaleX: 1, duration: 0.6, ease: 'power2.inOut' })
-      .set(img, { opacity: 1 })
-      .to(overlay, { scaleX: 0, transformOrigin: 'right', duration: 0.6, ease: 'power2.inOut' });
+        .set(img, { opacity: 1 })
+        .to(overlay, { scaleX: 0, transformOrigin: 'right', duration: 0.6, ease: 'power2.inOut' });
 });
 
 // =====================================================
@@ -501,19 +510,19 @@ let proxy = { skew: 0 },
     clamp = gsap.utils.clamp(-5, 5); // Don't let it skew too much
 
 ScrollTrigger.create({
-  onUpdate: (self) => {
-    let skew = clamp(self.getVelocity() / -300);
-    if (Math.abs(skew) > Math.abs(proxy.skew)) {
-      proxy.skew = skew;
-      gsap.to(proxy, {
-          skew: 0, 
-          duration: 0.8, 
-          ease: "power3", 
-          overwrite: true, 
-          onUpdate: () => skewSetter(proxy.skew) 
-      });
+    onUpdate: (self) => {
+        let skew = clamp(self.getVelocity() / -300);
+        if (Math.abs(skew) > Math.abs(proxy.skew)) {
+            proxy.skew = skew;
+            gsap.to(proxy, {
+                skew: 0,
+                duration: 0.8,
+                ease: "power3",
+                overwrite: true,
+                onUpdate: () => skewSetter(proxy.skew)
+            });
+        }
     }
-  }
 });
 
 // Set initial state for reveal images (if needed)
@@ -522,24 +531,109 @@ gsap.set('.reveal-wrapper img', { opacity: 0 });
 // =====================================================
 // FLOATING BACKGROUND SHAPES (Parallax)
 // =====================================================
-gsap.to('.shape-1', {
-    y: 100,
-    x: 50,
-    scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 2
-    }
+if (window.innerWidth > 992) {
+    gsap.to('.shape-1', {
+        y: 100,
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 2
+        }
+    });
+
+    gsap.to('.shape-2', {
+        y: -150,
+        scrollTrigger: {
+            trigger: 'body',
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 2
+        }
+    });
+}
+
+// =====================================================
+// CUSTOM CURSOR ANIMATION
+// =====================================================
+const cursorDot = document.querySelector('.cursor-dot');
+const cursorOutline = document.querySelector('.cursor-outline');
+
+if (cursorDot && cursorOutline) {
+    window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        // Show cursor on first move
+        cursorDot.style.opacity = '1';
+        cursorOutline.style.opacity = '1';
+
+        // Dot follows mouse instantly
+        gsap.to(cursorDot, {
+            x: posX - 4,
+            y: posY - 4,
+            duration: 0
+        });
+
+        // Outline follows with smooth lag
+        gsap.to(cursorOutline, {
+            x: posX - 20,
+            y: posY - 20,
+            duration: 0.5,
+            ease: 'power3.out'
+        });
+    });
+
+    // Hover effects for interactive elements
+    const links = document.querySelectorAll('a, button, .faq-question, .trans-card, .philosophy-col, .inclusion-card');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            document.body.classList.add('cursor-active');
+        });
+        link.addEventListener('mouseleave', () => {
+            document.body.classList.remove('cursor-active');
+        });
+    });
+}
+
+// =====================================================
+// 3D TILT EFFECT
+// =====================================================
+const tiltElements = document.querySelectorAll('.inclusion-card, .trans-card, .philosophy-col, .app-feature-item, .method-step-card, .faq-item, .comp-mobile-card');
+
+tiltElements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = (y - centerY) / 10;
+        const rotateY = (centerX - x) / 10;
+
+        gsap.to(el, {
+            rotationX: rotateX,
+            rotationY: rotateY,
+            perspective: 1000,
+            transformPerspective: 1000,
+            scale: 1.05,
+            duration: 0.5,
+            ease: 'power2.out'
+        });
+    });
+
+    el.addEventListener('mouseleave', () => {
+        gsap.to(el, {
+            rotationX: 0,
+            rotationY: 0,
+            scale: 1,
+            duration: 0.5,
+            ease: 'power2.out'
+        });
+    });
 });
 
-gsap.to('.shape-2', {
-    y: -150,
-    x: -80,
-    scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 2
-    }
-});
+// Floating shapes removed to prevent page stretching
+
